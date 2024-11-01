@@ -1,0 +1,32 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Formulario de contato",
+    "line": 1,
+    "id": "formulario-de-contato",
+    "tags": [],
+    "uri": "contactForm.feature",
+    "elements": [
+      {
+        "id": "formulario-de-contato;preencher-formulario-corretamente",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Preencher Formulario Corretamente",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Usuario está na pagina do Formulario",
+            "result": {
+              "status": "passed",
+              "duration": 3483000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
