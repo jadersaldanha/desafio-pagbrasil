@@ -4,5 +4,8 @@
   "company": "Fixtures are a great way to mock data for responses to routes",
   "website": "https://www.cypress.com",
   "phone": "5232132132",
-  "inquiry": "olá gostaria"
+  "inquiry": "olá gostaria",
+  "sucess_message": "Form submitted successfully!"
 }
+
+

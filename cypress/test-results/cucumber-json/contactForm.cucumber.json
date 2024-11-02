@@ -1,14 +1,14 @@
 [
   {
     "keyword": "Feature",
-    "name": "Formulario de contato",
+    "name": "Formulario de contato para usuários da PagBrasil",
     "line": 1,
-    "id": "formulario-de-contato",
+    "id": "formulario-de-contato-para-usuários-da-pagbrasil",
     "tags": [],
     "uri": "contactForm.feature",
     "elements": [
       {
-        "id": "formulario-de-contato;preencher-formulario-corretamente",
+        "id": "formulario-de-contato-para-usuários-da-pagbrasil;preencher-formulario-corretamente",
         "keyword": "Scenario",
         "line": 3,
         "name": "Preencher Formulario Corretamente",
@@ -22,7 +22,107 @@
             "name": "Usuario está na pagina do Formulario",
             "result": {
               "status": "passed",
-              "duration": 4262000000
+              "duration": 374000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "Preenche nome, email, empresa, website, phone e inquiry",
+            "result": {
+              "status": "passed",
+              "duration": 2771000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "A mensagem de sucesso é exibida",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "formulario-de-contato-para-usuários-da-pagbrasil;preencher-formulario-com-dados-incorretos",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Preencher Formulario com dados incorretos",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Usuario está na pagina do Formulario",
+            "result": {
+              "status": "passed",
+              "duration": 356000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Preenche nome, email, empresa, website, phone e inquiry com dados incorretos",
+            "result": {
+              "status": "passed",
+              "duration": 2739000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Valida a exibição da mensagem de campo inválido",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Campo nome inválido' within the selector: 'error' but never did.\n    at Context.eval (cypress/e2e/cucumber/stepDefinitions/contactForm/contactForm_stepdef.js:37:48)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "formulario-de-contato-para-usuários-da-pagbrasil;tenta-preencher-formulario-sem-dados",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Tenta preencher formulario sem dados",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "Usuario está na pagina do Formulario",
+            "result": {
+              "status": "passed",
+              "duration": 1351000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Clica em submit sem preencher dados",
+            "result": {
+              "status": "passed",
+              "duration": 108000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Valida a exibição da mensagem do tooltip",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
             }
           }
         ]
