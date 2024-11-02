@@ -13,10 +13,6 @@ Funcionalidades
 - Envio de formulário com sucesso
 - Mensagens de erro personalizadas
 
-Estrutura do Projeto
-
-- i
-
 Instalação e Execução
 
 1. Clone o repositório: `git clone https://github.com/jadersaldanha/desafio-pagbrasil/tree/main
