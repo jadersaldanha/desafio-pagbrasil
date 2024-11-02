@@ -22,6 +22,14 @@ Given('Preenche nome, email, empresa, website, phone e inquiry corretamente', fu
         fixture: "mockSucess.json",
     });
 
+    cy.request({
+        method: 'GET',
+        url: 'https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html'
+      }).then((response) => {
+        expect(response.status).to.equal(200);
+        expect(response.body.sucesso).to.equal(true)
+      })
+
 })
 
 Given('A mensagem de sucesso é exibida', function(){
@@ -40,6 +48,15 @@ Given('Preenche nome, email, empresa, website, phone e inquiry com dados incorre
     cy.intercept("GET", "https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html", {
         fixture: "mockFailed.json",
     });
+
+    cy.request({
+        method: 'GET',
+        url: 'https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html'
+      }).then((response) => {
+        expect(response.status).to.equal(412);
+        expect(response.body.sucesso).to.equal(false)
+        expect(response.body.erro).to.equal('Campo xxx inválido.')
+      })
 })
 
 Given('Valida a exibição da mensagem de campo inválido', function(){
