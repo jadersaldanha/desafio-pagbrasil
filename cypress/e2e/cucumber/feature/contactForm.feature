@@ -2,7 +2,7 @@ Feature: Formulario de contato para usuários da PagBrasil
 
 Scenario: Preencher Formulario Corretamente
 Given Usuario está na pagina do Formulario
-And Preenche nome, email, empresa, website, phone e inquiry
+And Preenche nome, email, empresa, website, phone e inquiry corretamente
 Then A mensagem de sucesso é exibida
 
 Scenario: Preencher Formulario com dados incorretos

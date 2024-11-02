@@ -9,7 +9,7 @@ Given('Usuario está na pagina do Formulario',function(){
     cy.visit('https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html')
 })
 
-Given('Preenche nome, email, empresa, website, phone e inquiry', function(){
+Given('Preenche nome, email, empresa, website, phone e inquiry corretamente', function(){
     cy.get('#name').type(this.data.name)
     cy.get('#email').type(this.data.email)
     cy.get('#company').type(this.data.company)
@@ -17,6 +17,11 @@ Given('Preenche nome, email, empresa, website, phone e inquiry', function(){
     cy.get('#phone').type(this.data.phone)
     cy.get('#inquiry').type(this.data.inquiry)
     cy.get('button').click()
+
+    cy.intercept("GET", "https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html", {
+        fixture: "mockSucess.json",
+    });
+
 })
 
 Given('A mensagem de sucesso é exibida', function(){
@@ -31,6 +36,10 @@ Given('Preenche nome, email, empresa, website, phone e inquiry com dados incorre
     cy.get('#phone').type(this.InvalidData.phone)
     cy.get('#inquiry').type(this.InvalidData.inquiry)
     cy.get('button').click()
+
+    cy.intercept("GET", "https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html", {
+        fixture: "mockFailed.json",
+    });
 })
 
 Given('Valida a exibição da mensagem de campo inválido', function(){
