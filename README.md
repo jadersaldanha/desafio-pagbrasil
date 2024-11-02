@@ -1,6 +1,6 @@
 Descrição
 
-Este projeto é uma solução para o desafio técnico proposto pela PagBrasil. O objetivo é criar um formulário de cadastro que atenda aos requisitos de funcionalidade, desempenho, usabilidade, segurança, acessibilidade e compatibilidade.
+Este projeto é uma solução para o desafio técnico proposto pela PagBrasil. 
 
 Tecnologias Utilizadas
 - JavaScript (ES6+)
