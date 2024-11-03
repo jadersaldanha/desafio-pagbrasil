@@ -22,17 +22,18 @@
             "name": "Usuario está na pagina do Formulario",
             "result": {
               "status": "passed",
-              "duration": 374000000
+              "duration": 1193000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 5,
-            "name": "Preenche nome, email, empresa, website, phone e inquiry",
+            "name": "Preenche nome, email, empresa, website, phone e inquiry corretamente",
             "result": {
-              "status": "passed",
-              "duration": 2771000000
+              "status": "failed",
+              "duration": 3819000000,
+              "error_message": "AssertionError: expected undefined to equal true\n    at Context.eval (cypress/e2e/cucumber/stepDefinitions/contactForm/contactForm_stepdef.js:30:41)"
             }
           },
           {
@@ -41,8 +42,7 @@
             "line": 6,
             "name": "A mensagem de sucesso é exibida",
             "result": {
-              "status": "passed",
-              "duration": 6000000
+              "status": "skipped"
             }
           }
         ]
@@ -62,7 +62,7 @@
             "name": "Usuario está na pagina do Formulario",
             "result": {
               "status": "passed",
-              "duration": 356000000
+              "duration": 486000000
             }
           },
           {
@@ -71,8 +71,8 @@
             "line": 10,
             "name": "Preenche nome, email, empresa, website, phone e inquiry com dados incorretos",
             "result": {
-              "status": "passed",
-              "duration": 2739000000
+              "status": "failed",
+              "error_message": "AssertionError\n    + expected - actual\n\n    -200\n    +412\n\n    at Context.eval (cypress/e2e/cucumber/stepDefinitions/contactForm/contactForm_stepdef.js:56:35)"
             }
           },
           {
@@ -81,8 +81,7 @@
             "line": 11,
             "name": "Valida a exibição da mensagem de campo inválido",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Campo nome inválido' within the selector: 'error' but never did.\n    at Context.eval (cypress/e2e/cucumber/stepDefinitions/contactForm/contactForm_stepdef.js:37:48)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+              "status": "skipped"
             }
           }
         ]
@@ -102,7 +101,7 @@
             "name": "Usuario está na pagina do Formulario",
             "result": {
               "status": "passed",
-              "duration": 1351000000
+              "duration": 459000000
             }
           },
           {
@@ -112,7 +111,7 @@
             "name": "Clica em submit sem preencher dados",
             "result": {
               "status": "passed",
-              "duration": 108000000
+              "duration": 97000000
             }
           },
           {
@@ -122,7 +121,7 @@
             "name": "Valida a exibição da mensagem do tooltip",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 23000000
             }
           }
         ]
