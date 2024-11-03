@@ -23,9 +23,18 @@ Given('Preenche nome, email, empresa, website, phone e inquiry corretamente', fu
     });
 
     cy.request({
-        method: 'GET',
+        method: 'POST',
         url: 'https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html'
-      }).then((response) => {
+        ,
+        body:{
+            "name" : this.InvalidData.name,
+            "email" : this.InvalidData.email,
+            "company" : this.InvalidData.company,
+            "website" : this.InvalidData.website,
+            "phone" : this.InvalidData.phone,
+            "inquiry" : this.InvalidData.inquiry
+        }
+    }).then((response) => {
         expect(response.status).to.equal(200);
         expect(response.body.sucesso).to.equal(true)
       })
@@ -50,9 +59,18 @@ Given('Preenche nome, email, empresa, website, phone e inquiry com dados incorre
     });
 
     cy.request({
-        method: 'GET',
+        method: 'POST',
         url: 'https://www.pagbrasil.com/fb831484f9611648f05411b3746466b6/form.html'
-      }).then((response) => {
+        ,
+        body:{
+            "name" : this.InvalidData.name,
+            "email" : this.InvalidData.email,
+            "company" : this.InvalidData.company,
+            "website" : this.InvalidData.website,
+            "phone" : this.InvalidData.phone,
+            "inquiry" : this.InvalidData.inquiry
+        }
+    }).then((response) => {
         expect(response.status).to.equal(412);
         expect(response.body.sucesso).to.equal(false)
         expect(response.body.erro).to.equal('Campo xxx inválido.')
