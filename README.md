@@ -26,10 +26,10 @@ Contribuições são bem-vindas!
 
 Estrutura do projeto
 
-em cypress/e2e/cucumber/feature estao os cenarios levantados
-em stepDefinitions/contactForm_stedej.js estao a implementação dos steps definitions
-em fixtures alguns dados para os testes e retornos esperados da API
-em reporting estao os arquivos usados para a geração dos reports
+- em cypress/e2e/cucumber/feature estao os cenarios levantados
+- em stepDefinitions/contactForm_stedej.js estao a implementação dos steps definitions
+- em fixtures alguns dados para os testes e retornos esperados da API
+- em reporting estao os arquivos usados para a geração dos reports
 
 Contato
 
